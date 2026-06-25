@@ -1,0 +1,515 @@
+/* =============================================
+   CRUD Section - Matching Space Dynamic Theme
+   Colors: #fe3f40 (red), #03a4ed (blue)
+   Font: Poppins
+============================================= */
+
+/* ---- Section Wrapper ---- */
+#crud-manager {
+  background: #fafafa;
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+#crud-manager::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom right, #fff 50%, #fafafa 50%);
+}
+
+/* ---- Section Heading (matches existing) ---- */
+#crud-manager .section-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#crud-manager .section-heading h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 12px;
+}
+
+#crud-manager .section-heading h2 em {
+  font-style: normal;
+  color: #03a4ed;
+}
+
+#crud-manager .section-heading h2 span {
+  color: #fe3f40;
+}
+
+#crud-manager .section-heading p {
+  color: #7a7a7a;
+  font-size: 15px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---- Form Card ---- */
+.crud-form-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(3, 164, 237, 0.10);
+  padding: 36px 32px 28px;
+  margin-bottom: 36px;
+  transition: box-shadow 0.3s ease;
+}
+
+.crud-form-card:hover {
+  box-shadow: 0 12px 48px rgba(3, 164, 237, 0.18);
+}
+
+.crud-form-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crud-form-card h4 .form-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.crud-form-card h4 .form-icon.blue { background: #03a4ed; }
+.crud-form-card h4 .form-icon.red  { background: #fe3f40; }
+
+/* ---- Inputs (match theme) ---- */
+.crud-input {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #e8e8e8;
+  border-radius: 25px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #2a2a2a;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  margin-bottom: 14px;
+}
+
+.crud-input:focus {
+  border-color: #03a4ed;
+  box-shadow: 0 0 0 3px rgba(3, 164, 237, 0.12);
+}
+
+.crud-input.edit-mode:focus {
+  border-color: #fe3f40;
+  box-shadow: 0 0 0 3px rgba(254, 63, 64, 0.12);
+}
+
+.crud-select {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #e8e8e8;
+  border-radius: 25px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #2a2a2a;
+  background: #fff;
+  transition: border-color 0.3s ease;
+  outline: none;
+  margin-bottom: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2303a4ed' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+.crud-select:focus {
+  border-color: #03a4ed;
+  box-shadow: 0 0 0 3px rgba(3, 164, 237, 0.12);
+}
+
+/* ---- Buttons ---- */
+.crud-btn {
+  height: 48px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+}
+
+.crud-btn-primary {
+  background: #fe3f40;
+  color: #fff;
+}
+
+.crud-btn-primary:hover {
+  background: #d93030;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 63, 64, 0.35);
+}
+
+.crud-btn-blue {
+  background: #03a4ed;
+  color: #fff;
+}
+
+.crud-btn-blue:hover {
+  background: #0291d0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(3, 164, 237, 0.35);
+}
+
+.crud-btn-outline {
+  background: transparent;
+  color: #7a7a7a;
+  border: 2px solid #e8e8e8;
+}
+
+.crud-btn-outline:hover {
+  border-color: #03a4ed;
+  color: #03a4ed;
+}
+
+.crud-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* ---- Table Area ---- */
+.crud-table-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(3, 164, 237, 0.10);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.crud-table-card:hover {
+  box-shadow: 0 12px 48px rgba(3, 164, 237, 0.18);
+}
+
+.crud-table-header {
+  background: linear-gradient(135deg, #03a4ed 0%, #0291d0 100%);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.crud-table-header h4 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crud-count-badge {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  min-width: 28px;
+  text-align: center;
+}
+
+.crud-search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.18);
+  border-radius: 25px;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.crud-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  width: 160px;
+  height: 36px;
+}
+
+.crud-search-box input::placeholder { color: rgba(255,255,255,0.65); }
+
+.crud-search-box i { color: rgba(255,255,255,0.75); font-size: 13px; }
+
+.crud-table-wrap {
+  overflow-x: auto;
+}
+
+.crud-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.crud-table thead tr {
+  background: #f5f9ff;
+}
+
+.crud-table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 600;
+  color: #2a2a2a;
+  font-size: 13px;
+  border-bottom: 2px solid #e8e8e8;
+  white-space: nowrap;
+}
+
+.crud-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.crud-table tbody tr:last-child { border-bottom: none; }
+
+.crud-table tbody tr:hover {
+  background: #f0f8ff;
+}
+
+.crud-table tbody td {
+  padding: 14px 18px;
+  color: #555;
+  vertical-align: middle;
+}
+
+.crud-table tbody td:first-child { font-weight: 600; color: #2a2a2a; }
+
+/* ---- Status Badges ---- */
+.status-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.status-active   { background: #e6f9f0; color: #1a9e5e; }
+.status-pending  { background: #fff3e0; color: #e67e22; }
+.status-inactive { background: #fde8e8; color: #e74c3c; }
+
+/* ---- Category Badges ---- */
+.cat-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(3, 164, 237, 0.10);
+  color: #03a4ed;
+}
+
+/* ---- Action Buttons ---- */
+.action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.25s ease;
+  margin: 0 2px;
+}
+
+.action-edit {
+  background: rgba(3, 164, 237, 0.12);
+  color: #03a4ed;
+}
+
+.action-edit:hover {
+  background: #03a4ed;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.action-delete {
+  background: rgba(254, 63, 64, 0.10);
+  color: #fe3f40;
+}
+
+.action-delete:hover {
+  background: #fe3f40;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ---- Empty State ---- */
+.crud-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: #aaa;
+}
+
+.crud-empty i {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: #ddd;
+  display: block;
+}
+
+.crud-empty p { font-size: 14px; margin: 0; }
+
+/* ---- Toast Notification ---- */
+#crud-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-item {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  transform: translateX(120px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: auto;
+  border-left: 4px solid #03a4ed;
+}
+
+.toast-item.toast-success { border-left-color: #1a9e5e; }
+.toast-item.toast-error   { border-left-color: #fe3f40; }
+.toast-item.toast-info    { border-left-color: #03a4ed; }
+
+.toast-item.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ---- Modal ---- */
+.crud-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 8888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.crud-modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.crud-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  width: 90%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  transform: scale(0.85) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: center;
+}
+
+.crud-modal-overlay.active .crud-modal {
+  transform: scale(1) translateY(0);
+}
+
+.crud-modal .modal-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(254, 63, 64, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 26px;
+  color: #fe3f40;
+}
+
+.crud-modal h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 8px;
+}
+
+.crud-modal p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ---- Row animations ---- */
+@keyframes rowIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rowOut {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(60px); }
+}
+
+.row-enter { animation: rowIn 0.35s ease forwards; }
+.row-exit  { animation: rowOut 0.3s ease forwards; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .crud-form-card { padding: 24px 18px 20px; }
+  .crud-table-header { padding: 16px 18px; }
+  .crud-modal { padding: 28px 20px; }
+  #crud-toast { right: 14px; bottom: 14px; }
+}
